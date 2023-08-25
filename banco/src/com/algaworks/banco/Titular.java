@@ -1,11 +1,16 @@
-package com.iagosouzas.agencia;
+package com.algaworks.banco;
 
-public class Cliente {
+import java.util.Objects;
+
+public class Titular {
 
     private String nome;
     private String cpf;
 
-    public Cliente(String nome, String cpf){
+    public Titular(String nome, String cpf) {
+        Objects.requireNonNull(nome);
+        Objects.requireNonNull(cpf);
+
         this.nome = nome;
         this.cpf = cpf;
     }
@@ -20,9 +25,5 @@ public class Cliente {
 
     public String getCpf() {
         return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 }
